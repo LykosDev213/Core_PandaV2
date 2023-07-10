@@ -13,3 +13,4 @@ Voici mon core ! , avec plein de script Utils pour votre serveur Roleplay
 
 - Permet avoir un Rich Precense avec un boutton ! 
 - Pour modifier son Rich Precense il faux aller dans Core_PandaV2/cl/cl_core.lua : dans la ligne 216
+- en cas de problème veuillez me contactez sur discord : pandaqc123
