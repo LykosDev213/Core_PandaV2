@@ -9,7 +9,7 @@ client_script{
     "core/script/otage.lua",
     "core/script/change_seat.lua",
     "core/script/command.lua",
-    "core/script/hide_trunk",
+    "core/script/hide_trunk.lua",
     "core/script/ko.lua",
     "core/script/levermain.lua",
     "core/script/porter.lua",
