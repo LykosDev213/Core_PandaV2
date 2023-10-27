@@ -49,23 +49,6 @@ end)
 
 
 ----------------------------------------------------------------------------------------------------
---------------------------------  PandaCore by lykos --------------
-----------------------------------------------------------------------------------------------------
-
---[Anti Coup De Crosse]
-Citizen.CreateThread(function()
-	while true do
-Citizen.Wait(0)
-	local ped = PlayerPedId()
-		if IsPedArmed(ped, 6) then
-			DisableControlAction(1, 140, true)
-			DisableControlAction(1, 141, true)
-			DisableControlAction(1, 142, true)
-		end
-	end
-end)
-
-----------------------------------------------------------------------------------------------------
 --------------------------------  PandaCore by lykos-------------
 ----------------------------------------------------------------------------------------------------
 
@@ -158,14 +141,6 @@ Citizen.CreateThread(function()
     AddTextEntry('PM_SCR_RPL', config["R*EDITOR"])
 end)
  
-----------------------------------------------------------------------------------------------------
---------------------------------  PandaCore by lykos -----------------------------------------------
-----------------------------------------------------------------------------------------------------
-
--- [Rcustoms]
-Citizen.CreateThread(function()
-	RequestIpl("rcustoms_milo")
-end)
 
 ----------------------------------------------------------------------------------------------------
 --------------------------------  PandaCore by lykos --------------
@@ -312,31 +287,3 @@ Citizen.CreateThread(function()
   end
 end)
 
----  Interdire les employés de conduire les véhicules de services: -- by PandaQC
-
-
-Citizen.CreateThread(function()
-	while ESX == nil do
-	  TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-	  Citizen.Wait(1)
-	end
-  end)
-  Citizen.CreateThread(function()
-	  while true do
-	  Citizen.Wait(1)
-		  if IsPedInAnyPoliceVehicle(GetPlayerPed(PlayerId())) then
-			  local veh = GetVehiclePedIsUsing(GetPlayerPed(PlayerId()), true)
-			  if (GetPedInVehicleSeat(veh, -2) == GetPlayerPed(PlayerId())) then
-				  if (ESX.PlayerData.job ~= nil and (ESX.PlayerData.job.name ~= 'police' or ESX.PlayerData.job.name ~= 'ambulance')) then
-					ESX.ShowNotification("Une voiture de police/ambulance n'est pas réservée aux civils..")
-					SetVehicleUndriveable(veh, true)
-				  end
-			  end
-		  end
-	  end
-  end)
-
-
-----------------------------------------------------------------------------------------------------
---------------------------------  PandaCore by lykos -----------------------------------------------
-----------------------------------------------------------------------------------------------------
