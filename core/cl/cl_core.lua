@@ -42,7 +42,7 @@ end
 Citizen.CreateThread(function()
 	while true do
 	SetWeaponDrops()
-Citizen.Wait(500)
+Citizen.Wait(0)
   end
 end)
 
@@ -107,8 +107,8 @@ function AddTextEntry(key, value)
 end
 
 local config = {
-    ["TITLE"] = "SLite | FA ",
-    ["SUBTITLE"] = "SLite Roleplay",
+    ["TITLE"] = "Nom du serveur ",
+    ["SUBTITLE"] = "Description",
     ["MAP"] = "Map",
     ["STATUS"] = "Status",
     ["GAME"] = "Jeux",
@@ -198,7 +198,7 @@ Citizen.CreateThread(function()
         SetDiscordRichPresenceAction(0, "💛Discord exemple!", "https://discord.gg/")
         SetDiscordRichPresenceAction(1, "👻Se Connecter", "fivem://connect/localhost:30120")
         -- Seconde par minute 
-        Citizen.Wait(60000)
+        Citizen.Wait(0)
     end
 end)
 Citizen.CreateThread(function()
@@ -267,7 +267,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(300)
+        Citizen.Wait(0)
 
         if GetPlayerWantedLevel(PlayerId()) ~= 0 then
             SetPlayerWantedLevel(PlayerId(), 0, false)
